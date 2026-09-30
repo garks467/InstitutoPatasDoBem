@@ -1,0 +1,11 @@
+document.addEventListener('click', function (evento) {
+    if (evento.target.classList.contains('abrir-modal')) {
+        const modal = document.getElementById('modal-voluntario');
+        if (modal) modal.showModal();
+    }
+
+    if (evento.target.classList.contains('fechar-modal')) {
+        const modal = document.getElementById('modal-voluntario');
+        if (modal) modal.close();
+    }
+});

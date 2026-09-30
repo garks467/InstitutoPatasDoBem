@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Patas do Bem — Cadastro</title>
+    <link rel="stylesheet" href="../dist/css/styles.min.css">
+    <meta name="description" content="Cadastre-se para ser voluntário ou doador do Instituto Patas do Bem.">
+</head>
+<body>
+    <header>
+        <h1>Instituto Patas do Bem</h1>
+        <p>Cada patinha merece um lar</p>
+        <nav aria-label="Menu principal">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-botao" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </label>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li class="tem-submenu">
+                    <a href="projetos.html">Projetos</a>
+                    <ul class="submenu">
+                        <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+                        <li><a href="projetos.html#doacoes">Doações</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Faça parte da nossa rede</h2>
+            <p>Preencha seus dados e escolha como quer contribuir.</p>
+
+            <div class="alerta alerta-info" role="status">
+                <span class="alerta-titulo">Dica</span>
+                Preencha todos os campos com atenção. Eles são obrigatórios.
+            </div>
+
+            <div class="alerta alerta-sucesso" role="status">
+                <span class="alerta-titulo">Exemplo de sucesso</span>
+                Este alerta aparece após o envio bem-sucedido do formulário.
+            </div>
+
+            <div class="alerta alerta-aviso" role="status">
+                <span class="alerta-titulo">Exemplo de aviso</span>
+                Confira seus dados antes de enviar o cadastro.
+            </div>
+
+            <div class="alerta alerta-erro" role="alert">
+                <span class="alerta-titulo">Exemplo de erro</span>
+                Algum campo foi preenchido incorretamente. Corrija e tente de novo.
+            </div>
+
+            <form id="form-cadastro" action="#" method="post">
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome"
+                           pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+"
+                           title="Apenas letras e espaços"
+                           required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf"
+                           pattern="[0-9]{11}"
+                           maxlength="11"
+                           placeholder="Apenas 11 números"
+                           title="Digite 11 dígitos, sem pontos ou traços"
+                           required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone"
+                           pattern="[0-9]{10,11}"
+                           maxlength="11"
+                           placeholder="DDD + número (10 ou 11 dígitos)"
+                           title="Digite DDD + número, sem espaços ou símbolos"
+                           required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep"
+                           pattern="[0-9]{8}"
+                           maxlength="8"
+                           placeholder="Somente 8 números"
+                           title="Digite exatamente 8 dígitos"
+                           required>
+
+                    <label for="logradouro">Logradouro:</label>
+                    <input type="text" id="logradouro" name="logradouro" required>
+
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade" required>
+
+                    <label for="estado">Estado (UF):</label>
+                    <input type="text" id="estado" name="estado"
+                           pattern="[A-Z]{2}"
+                           maxlength="2"
+                           placeholder="EX: SP, RJ"
+                           title="Digite a sigla do estado com duas letras maiúsculas"
+                           required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como quer ajudar?</legend>
+                    <label>
+                        <input type="radio" name="interesse" value="voluntario" required>
+                        Quero ser voluntário
+                    </label>
+                    <label>
+                        <input type="radio" name="interesse" value="doador">
+                        Quero ser doador
+                    </label>
+                    <label>
+                        <input type="radio" name="interesse" value="ambos">
+                        Ambos
+                    </label>
+                </fieldset>
+
+                <button type="submit">Enviar cadastro</button>
+
+                <label for="toast-demo" class="toast-botao">Ver notificação de confirmação</label>
+            </form>
+
+            <input type="checkbox" id="toast-demo" class="toast-toggle" aria-hidden="true">
+
+            <div class="toast" role="status">
+                <strong>Cadastro recebido!</strong> Em breve entraremos em contato.
+            </div>
+        </section>
+
+        <section id="registros">
+            <h2>Cadastros salvos neste navegador</h2>
+            <p>
+                Estes dados ficam apenas no seu navegador, por meio do
+                <code>localStorage</code>. Nada é enviado a servidores.
+            </p>
+            <div id="lista-cadastros"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Instituto Patas do Bem – CNPJ: 98.765.432/0001-11</p>
+        <p>
+            <a href="mailto:contato@patasdobem.org">contato@patasdobem.org</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/plugin/localizedFormat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/locale/pt-br.js"></script>
+    <script src="../dist/js/storage.min.js"></script>
+    <script src="../dist/js/data.min.js"></script>
+    <script src="../dist/js/templates.min.js"></script>
+    <script src="../dist/js/modal.min.js"></script>
+    <script src="../dist/js/forms.min.js"></script>
+    <script src="../dist/js/spa.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Patas do Bem — Cada patinha merece um lar</title>
+    <link rel="stylesheet" href="../dist/css/styles.min.css">
+    <meta name="description" content="ONG de resgate e adoção responsável de animais abandonados.">
+</head>
+<body>
+
+    <header>
+        <h1>Instituto Patas do Bem</h1>
+        <p>Cada patinha merece um lar</p>
+        <nav aria-label="Menu principal">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-botao" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </label>
+            <ul>
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li class="tem-submenu">
+                    <a href="projetos.html">Projetos</a>
+                    <ul class="submenu">
+                        <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+                        <li><a href="projetos.html#doacoes">Doações</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>Quem somos</h2>
+            <img 
+                src="../assets/images/equipe-patas.webp" 
+                alt="Equipe do Instituto Patas do Bem com animais resgatados no abrigo" 
+                width="600" 
+                height="400">
+            <p>
+                O <strong>Instituto Patas do Bem</strong> nasceu em 2018 com a missão de 
+                resgatar animais em situação de abandono, oferecer tratamento veterinário 
+                e encontrar lares responsáveis. Atuamos com resgate, castração e adoção.
+            </p>
+            <p>
+                Já resgatamos mais de 1.500 animais e contamos com uma rede de 200 
+                voluntários. Acreditamos que cada vida importa.
+            </p>
+            <p><a href="projetos.html">Conheça todos os nossos projetos →</a></p>
+        </section>
+
+        <section id="projetos">
+            <h2>Nossos projetos</h2>
+            <article>
+                <h3>Resgate e acolhimento</h3>
+                <p>Equipes treinadas atendem chamados de animais em risco e oferecem abrigo temporário até a adoção.</p>
+            </article>
+            <article>
+                <h3>Castração solidária</h3>
+                <p>Mutirões mensais de castração gratuita para animais de famílias de baixa renda, controlando a população de rua.</p>
+            </article>
+            <p><a href="projetos.html">Veja mais detalhes e como participar →</a></p>
+        </section>
+
+        <section id="contato">
+            <h2>Fale com a gente</h2>
+            <address>
+                <p><strong>Endereço:</strong> Rua dos Bichinhos, 456 – Jardim Animal, São Paulo – SP</p>
+                <p><strong>Telefone:</strong> <a href="tel:+5511988888888">(11) 98888-8888</a></p>
+                <p><strong>E-mail:</strong> <a href="mailto:contato@patasdobem.org">contato@patasdobem.org</a></p>
+                <p><strong>Horário:</strong> Seg–Sáb, 8h às 17h</p>
+            </address>
+
+            <h3>Envie uma mensagem</h3>
+            <form id="form-contato" action="#" method="post">
+                <label for="nome">Seu nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Seu e-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="msg">Mensagem:</label>
+                <textarea id="msg" name="msg" rows="4" required></textarea>
+
+                <button type="submit">Enviar mensagem</button>
+            </form>
+            <p>Ou <a href="cadastro.html">cadastre-se para ser voluntário ou doador</a>.</p>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Transparência</h2>
+        <ul>
+            <li><a href="#">Relatório anual 2025</a></li>
+            <li><a href="#">Prestação de contas</a></li>
+            <li><a href="cadastro.html">Seja um voluntário</a></li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>© 2026 Instituto Patas do Bem – CNPJ: 98.765.432/0001-11</p>
+        <p>
+            <a href="mailto:contato@patasdobem.org">contato@patasdobem.org</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/plugin/localizedFormat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/locale/pt-br.js"></script>
+    <script src="../dist/js/storage.min.js"></script>
+    <script src="../dist/js/data.min.js"></script>
+    <script src="../dist/js/templates.min.js"></script>
+    <script src="../dist/js/modal.min.js"></script>
+    <script src="../dist/js/forms.min.js"></script>
+    <script src="../dist/js/spa.min.js"></script>
+
+</body>
+</html>

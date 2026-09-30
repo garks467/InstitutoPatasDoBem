@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Patas do Bem — Projetos</title>
+    <link rel="stylesheet" href="../dist/css/styles.min.css">
+    <meta name="description" content="Conheça os projetos do Instituto Patas do Bem e saiba como ajudar como voluntário ou doador.">
+</head>
+<body>
+
+    <header>
+        <h1>Instituto Patas do Bem</h1>
+        <p>Cada patinha merece um lar</p>
+        <nav aria-label="Menu principal">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+            <label for="menu-toggle" class="menu-botao" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </label>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li class="tem-submenu">
+                    <a href="projetos.html">Projetos</a>
+                    <ul class="submenu">
+                        <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
+                        <li><a href="projetos.html#doacoes">Doações</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Nossas frentes de atuação</h2>
+            <p>
+                Todo animal merece cuidado. Seja com tempo, transporte ou recurso 
+                financeiro, existem várias formas de ajudar. Escolha a que mais 
+                combina com você.
+            </p>
+        </section>
+
+        <section id="voluntariado">
+            <h2>Voluntariado</h2>
+            <p>
+                Nossos voluntários são o coração do Instituto. Temos vagas presenciais 
+                e remotas para diferentes perfis.
+            </p>
+
+            <div id="lista-voluntariado"></div>
+
+            <template id="template-voluntario">
+                <article>
+                    <span class="badge"></span>
+                    <h3></h3>
+                    <p class="descricao"></p>
+                    <ul></ul>
+                    <button type="button" class="abrir-modal">Quero me inscrever</button>
+                </article>
+            </template>
+        </section>
+
+        <section id="doacoes">
+            <h2>Como doar</h2>
+            <p>
+                Sua doação, de qualquer valor, ajuda a manter nossos resgates e 
+                tratamentos veterinários.
+            </p>
+
+            <article>
+                <span class="badge badge-secundaria">Pontual</span>
+                <h3>Doação única</h3>
+                <p>
+                    Faça um pix ou transferência. O valor vai direto para ração, 
+                    medicamentos e cirurgias.
+                </p>
+                <ul>
+                    <li><strong>Pix:</strong> doacoes@patasdobem.org</li>
+                    <li><strong>Banco:</strong> Bradesco – Ag. 4321 – Cc. 98765-4</li>
+                </ul>
+                <a href="#">Doar agora</a>
+            </article>
+
+            <article>
+                <span class="badge badge-perigo">Urgente</span>
+                <h3>Padrinho mensal</h3>
+                <p>
+                    Com R$ 40 por mês você sustenta o tratamento completo de um animal 
+                    resgatado até a adoção.
+                </p>
+                <ul>
+                    <li>Valor mínimo: R$ 20</li>
+                    <li>Cancelamento a qualquer momento</li>
+                    <li>Receba fotos e relatórios do afilhado</li>
+                </ul>
+                <a href="#">Quero apadrinhar</a>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Quem já participou</h2>
+            <blockquote>
+                <p>"Adotar pelo Instituto mudou nossa vida. O processo foi transparente 
+                e recebemos todo o suporte pós-adoção."</p>
+                <cite>— Fernanda, adotante há 3 anos</cite>
+            </blockquote>
+            <blockquote>
+                <p>"Sou padrinho mensal e recebo atualizações frequentes sobre os 
+                animais. Ver o progresso deles é emocionante."</p>
+                <cite>— Rodrigo, padrinho mensal</cite>
+            </blockquote>
+        </aside>
+
+        <dialog id="modal-voluntario" class="modal" aria-labelledby="titulo-modal">
+            <div class="modal-conteudo">
+                <h3 id="titulo-modal">Inscrição em voluntariado</h3>
+                <p>
+                    Para se inscrever, envie um e-mail para
+                    <a href="mailto:voluntarios@patasdobem.org">voluntarios@patasdobem.org</a>
+                    informando seu nome, disponibilidade e a vaga de interesse.
+                    Retornaremos em até 3 dias úteis.
+                </p>
+                <div class="modal-acoes">
+                    <button type="button" class="fechar-modal">Fechar</button>
+                </div>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>© 2026 Instituto Patas do Bem – CNPJ: 98.765.432/0001-11</p>
+        <p>
+            <a href="mailto:contato@patasdobem.org">contato@patasdobem.org</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/plugin/localizedFormat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/locale/pt-br.js"></script>
+    <script src="../dist/js/storage.min.js"></script>
+    <script src="../dist/js/data.min.js"></script>
+    <script src="../dist/js/templates.min.js"></script>
+    <script src="../dist/js/modal.min.js"></script>
+    <script src="../dist/js/forms.min.js"></script>
+    <script src="../dist/js/spa.min.js"></script>
+
+</body>
+</html>
