@@ -28,7 +28,7 @@ Aplicação SPA com três rotas (Início, Projetos e Cadastro). O conteúdo é i
 
 ```bash
 git clone https://github.com/garks467/InstitutoPatasDoBem
-cd PatasDoBem
+cd InstitutoPatasDoBem
 python -m http.server 8000
 ```
 
